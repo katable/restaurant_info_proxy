@@ -1,0 +1,20 @@
+{
+  "name": "fecproxy",
+  "version": "1.0.0",
+  "description": "Proxy server by me",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon ./server.js"
+  },
+  "keywords": [],
+  "author": "Alex Sheehan",
+  "license": "",
+  "dependencies": {
+    "bluebird": "^3.5.2",
+    "cors": "^2.8.5",
+    "express": "^4.16.2",
+    "morgan": "^1.9.0",
+    "request": "^2.88.0",
+    "request-promise": "^4.2.2"
+  }
+}
