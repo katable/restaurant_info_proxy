@@ -1,0 +1,45 @@
+#RestaurantInfo {
+  margin: 1rem 0 1rem 10%;
+  width: 70%;
+}
+#reservation-div {
+  width: 85%;
+  margin-top: -68rem;
+  margin-left: 0;
+  display: flex;
+  justify-content: flex-end;
+  position: fixed;
+}
+#menu {
+  margin: 2rem 0 0 10%;
+  width: 70%;
+}
+#reviews {
+  margin: 2rem 0 0 5%;
+  width: 80%;
+}
+#header-picture {
+  width: 100%;
+}
+#pic-div {
+  margin-left: 10%;
+  width: 70%;
+}
+#pic-graph {
+  width: 50%;
+} 
+#footer {
+  width: 100%;
+  background: #333;
+}
+
+#footer .thirds {
+  width: 33%;
+  padding: 0.5rem 5rem;
+}
+
+#footer .thirds .footer-line {
+  color: white;
+  font-size: 1em;
+  margin-top: 1rem;
+}

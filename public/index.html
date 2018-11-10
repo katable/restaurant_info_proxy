@@ -3,16 +3,40 @@
   <head>
     <meta charset="UTF-8">
     <title>FEC Demo</title>
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
+    <div className="pic-container">
+      <img src="https://picsum.photos/1200/300?image=163" id="header-picture"/>
+    </div>
     <div id="RestaurantInfo"></div>
-    <div id="Reservation"></div>
+    <div id="pic-div">
+      <img src="https://s3.us-east-2.amazonaws.com/bundle-picsgraph/Screen+Shot+2018-11-07+at+10.30.55+AM.png" id="pic-graph"/>
+    </div>
+    <div id="reservation-div">
+      <div id="Reservation"></div>
+    </div>
     <div id="menu"></div>
     <div id="reviews"></div>
+    <footer id="footer">
+      <div class="thirds">
+        <div class="footer-line">OpenTable Front End Capstone by:</div>
+        <div class="footer-line">Alex Sheehan</div>
+        <div class="footer-line">Kam Seto</div>
+        <div class="footer-line">Tony Wu</div>
+        <div class="footer-line">Angela Zhou</div>
+      </div>
+      <div class="thirds">
+        <div class="footer-line"></div>
+      </div>
+      <div class="thirds">
+        <div class="footer-line"></div>
+      </div>
+    </footer>
     <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
     <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
     <script src="https://s3-us-west-1.amazonaws.com/restaurant-info/restaurantinfo/bundle.js"></script>
-    <script src="https://s3.us-east-2.amazonaws.com/reviews-opentable2/bundle.js"></script>
+    <script src="https://s3.us-east-2.amazonaws.com/bundle-reviews-openservices3/bundle.js"></script>
     <script src="https://s3-us-west-1.amazonaws.com/resyservice/bundle.js"></script>
     <script src="https://s3-us-west-1.amazonaws.com/kata-menu/main.js"></script>
   </body>

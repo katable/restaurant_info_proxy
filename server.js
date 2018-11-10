@@ -11,8 +11,13 @@ app.use(morgan('dev'));
 app.use(cors());
 app.use(express.static(path.join(__dirname, 'public')));
 
+const restaurantInfoUrl = 'http://ec2-52-53-177-126.us-west-1.compute.amazonaws.com';
+const resyUrl = 'http://ec2-54-153-45-179.us-west-1.compute.amazonaws.com';
+const reviewsUrl = 'http://ec2-18-219-151-31.us-east-2.compute.amazonaws.com';
+const menuUrl = 'http://ec2-18-212-129-29.compute-1.amazonaws.com';
+
 app.get('/restaurant/profile/:restaurant_id', (req, res) => {
-  rp(`http://localhost:3001/restaurant/profile/${req.params.restaurant_id}`)
+  rp(`${restaurantInfoUrl}/restaurant/profile/${req.params.restaurant_id}`)
     .then((body) => {
       res.send(body);
     })
@@ -22,7 +27,7 @@ app.get('/restaurant/profile/:restaurant_id', (req, res) => {
 });
 
 app.get('/reservations/timesBookedToday/:restaurant_id', (req, res) => {
-  rp(`http://localhost:3002/reservations/timesBookedToday/${req.params.restaurant_id}`)
+  rp(`${resyUrl}/reservations/timesBookedToday/${req.params.restaurant_id}`)
     .then((body) => {
       res.send(body);
     })
@@ -32,7 +37,7 @@ app.get('/reservations/timesBookedToday/:restaurant_id', (req, res) => {
 });
 
 app.get('/reservations/inventory', (req, res) => {
-  rp(`http://localhost:3002/${req.originalUrl}`)
+  rp(`${resyUrl}/${req.originalUrl}`)
     .then((body) => {
       res.send(body);
     })
@@ -43,7 +48,7 @@ app.get('/reservations/inventory', (req, res) => {
 });
 
 app.get('/restaurants/:restaurant_id/menu', (req, res) => {
-  rp(`http://localhost:3000/restaurants/${req.params.restaurant_id}/menu`)
+  rp(`${menuUrl}/restaurants/${req.params.restaurant_id}/menu`)
     .then((body) => {
       res.send(body);
     })
@@ -53,7 +58,7 @@ app.get('/restaurants/:restaurant_id/menu', (req, res) => {
 });
 
 app.get('/restaurant/:restaurant_id/reviews', (req, res) => {
-  rp(`http://localhost:8080/restaurant/${req.params.restaurant_id}/reviews`)
+  rp(`${reviewsUrl}/restaurant/${req.params.restaurant_id}/reviews`)
     .then((body) => {
       res.send(body);
     })
@@ -63,7 +68,7 @@ app.get('/restaurant/:restaurant_id/reviews', (req, res) => {
 });
 
 app.get('/reviews/:review_id', (req, res) => {
-  rp(`http://localhost:8080/reviews/${req.params.review_id}`)
+  rp(`${reviewsUrl}/reviews/${req.params.review_id}`)
     .then((body) => {
       res.send(body);
     })
@@ -73,7 +78,7 @@ app.get('/reviews/:review_id', (req, res) => {
 });
 
 app.get('/user/:user_id/reviews', (req, res) => {
-  rp(`http://localhost:8080/user/${req.params.user_id}/reviews`)
+  rp(`${reviewsUrl}/user/${req.params.user_id}/reviews`)
     .then((body) => {
       res.send(body);
     })
@@ -83,7 +88,7 @@ app.get('/user/:user_id/reviews', (req, res) => {
 });
 
 app.post('/reviews', (req, res) => {
-  rp(`http://localhost:8080/reviews`)
+  rp(`${reviewsUrl}/reviews`)
     .then((body) => {
       res.send(body);
     })
@@ -93,7 +98,7 @@ app.post('/reviews', (req, res) => {
 });
 
 app.delete('/reviews/:review_id', (req, res) => {
-  rp(`http://localhost:8080/reviews/${req.params.review_id}`)
+  rp(`${reviewsUrl}/reviews/${req.params.review_id}`)
     .then((body) => {
       res.send(body);
     })
@@ -103,7 +108,7 @@ app.delete('/reviews/:review_id', (req, res) => {
 });
 
 app.patch('/reviews/:review_id', (req, res) => {
-  rp(`http://localhost:8080/reviews/${req.params.review_id}`)
+  rp(`${reviewsUrl}/reviews/${req.params.review_id}`)
     .then((body) => {
       res.send(body);
     })
